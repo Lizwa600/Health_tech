@@ -1,6 +1,3 @@
-// ============================================================================
-// DATA STORAGE
-// ============================================================================
 
 // Sample patient data for demonstration (in production, this comes from Firebase)
 const samplePatientData = {
@@ -38,19 +35,12 @@ const samplePatientData = {
  }
 };
 
-
-// ============================================================================
-// APPLICATION STATE
-// ============================================================================
-
 // Current user session data
 let currentPatient = null;
 let generatedOTP = null;
 let otpExpiry = null;
 
-// ============================================================================
-// DOM ELEMENTS
-// ============================================================================
+
 
 // Main sections
 const patientFlow = document.getElementById('patient-flow');
@@ -84,9 +74,7 @@ const filePreview = document.getElementById('file-preview');
 const previewList = document.getElementById('preview-list');
 const uploadDocuments = document.getElementById('upload-documents');
 
-// ============================================================================
-// EVENT LISTENERS
-// ============================================================================
+
 
 // Patient authentication flow
 document.getElementById('verify-id-button').addEventListener('click', verifyPatientId);
@@ -106,9 +94,6 @@ fileUpload.addEventListener('change', handleFileSelection);
 cameraCapture.addEventListener('change', handleFileSelection);
 uploadDocuments.addEventListener('click', uploadDocumentsToPatient);
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
 
 // Show success or error messages to user
 function showMessage(message, type = 'error') {
@@ -133,9 +118,6 @@ function isOTPExpired() {
  return otpExpiry && Date.now() > otpExpiry;
 }
 
-// ============================================================================
-// SOUTH AFRICAN ID VALIDATION
-// ============================================================================
 
 // Validate South African ID number format
 function validateSAIdNumber(idNumber) {
@@ -168,9 +150,6 @@ function validateSAIdNumber(idNumber) {
  return { valid: true, cleanId: cleanId };
 }
 
-// ============================================================================
-// FIREBASE FUNCTIONS
-// ============================================================================
 
 // Get patient data from Firebase (with fallback to sample data)
 async function getPatientFromFirebase(idNumber) {
@@ -212,9 +191,6 @@ function resetPatientFlow() {
  hideMessage();
 }
 
-// ============================================================================
-// PATIENT AUTHENTICATION FUNCTIONS
-// ============================================================================
 
 // Step 1: Verify patient ID and show name confirmation
 async function verifyPatientId() {
@@ -320,10 +296,6 @@ function resendOTP() {
 }
 
 
-// ============================================================================
-// LOGOUT FUNCTION
-// ============================================================================
-
 // Clear all session data and return to main screen
 function logout() {
  // Clear session variables
@@ -339,9 +311,6 @@ function logout() {
  resetPatientFlow();
 }
 
-// ============================================================================
-// DOCUMENT SCANNING FUNCTIONS
-// ============================================================================
 
 // Global variable to store selected files
 let selectedFiles = [];
@@ -551,9 +520,6 @@ async function addDocumentsToPatient(patientId, documents) {
  }
 }
 
-// ============================================================================
-// RECORD DISPLAY FUNCTIONS
-// ============================================================================
 
 // Display patient's medical records
 function renderRecords(patient) {
