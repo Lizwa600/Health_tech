@@ -2,7 +2,7 @@
 // Sample patient data for demonstration (in production, this comes from Firebase)
 const samplePatientData = {
  '0211120351080': {
- name: 'Alice Johnson',
+ name: 'Qhawe Mendu',
  dob: '1995-07-20',
  phone: '+27-82-123-4567',
  idNumber: '0211120351080',
