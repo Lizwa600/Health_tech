@@ -3,7 +3,7 @@
 const samplePatientData = {
  '0211120351080': {
  name: 'Qhawe Mendu',
- dob: '1995-07-20',
+ dob: '2002-11-12',
  phone: '+27-82-123-4567',
  idNumber: '0211120351080',
  folder: [
