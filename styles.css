@@ -1,0 +1,11 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom scrollbar for the records section */
+#records-display::-webkit-scrollbar {
+    width: 8px;
+}
+#records-display::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 9999px;
+}
